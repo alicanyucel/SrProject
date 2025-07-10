@@ -1,0 +1,30 @@
+﻿using Microsoft.Extensions.Caching.Memory;
+using TELERADIOLOGY.Application.Services;
+
+namespace TELERADIOLOGY.Infrastructure.Services;
+internal sealed class MemoryCacheService(
+    IMemoryCache cache) : ICacheService
+{
+    public T? Get<T>(string key)
+    {
+        if (cache.TryGetValue(key, out var obj) && obj is T value)
+            return value;
+
+        return (T?)(object?)null;
+    }
+
+    public bool Remove(string key)
+    {
+        cache.Remove(key);
+        return true;
+    }
+
+    public void Set<T>(string key, T value, TimeSpan? expiry = null)
+    {
+        var cacheEntryOptions = new MemoryCacheEntryOptions
+        {
+            AbsoluteExpirationRelativeToNow = expiry ?? TimeSpan.FromHours(1),
+        };
+        cache.Set<T>(key, value, cacheEntryOptions);
+    }
+}
