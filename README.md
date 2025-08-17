@@ -1,5 +1,7 @@
 # TELERADIOLOGY
 
+![SR Badge](https://img.shields.io/badge/SR-95%25-blue)  
+
 Kurumsal teleradyoloji yönetim sistemi. .NET 8 tabanlı çok katmanlı mimari, MediatR ile CQRS, EF Core + PostgreSQL, ASP.NET Core Identity (JWT), Serilog, hız sınırlama, önbellekleme ve yerelleştirme özelliklerini içerir.
 
 - .NET 8 Web API (Swagger ile)
@@ -11,6 +13,9 @@ Kurumsal teleradyoloji yönetim sistemi. .NET 8 tabanlı çok katmanlı mimari, 
 - Rate limiting (FixedWindow)
 - Yerelleştirme (en, tr)
 - E-posta ve SMS gönderimi
+
+## SR Oranı
+- Bu proje için SR: %95
 
 ## Mimari
 - Domain: Entity, Enum ve Repository arayüzleri
