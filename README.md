@@ -1,4 +1,3 @@
-Teleradiology backend .net 8 web api
 Clean Arc Mimarisi Özeti
 Application Katamnında Dtolar,Crud İşlemleri(Cqrs) Business Kutuphaneler,Validation,Service Interfaceler,Autmapper,Fluent Validation
 Infrastructure katmanında Context,Migrations,Repository Classlar,cONFİGURATİONDb Context(Ef core) , Services Classlar
